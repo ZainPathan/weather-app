@@ -11,7 +11,7 @@ import {
     convertTemperatureToFahrenheit
 } from '../../../core/utils/TemperatureConversions';
 
-const GET_WEATHER_DATA_URL: string = '/data/2.5/forecast?q=Munich,de&APPID=75f972b80e26f14fe6c920aa6a85ad57&cnt=40';
+const GET_WEATHER_DATA_URL: string = 'weather/data/2.5/forecast?q=Munich,de&APPID=75f972b80e26f14fe6c920aa6a85ad57&cnt=40';
 
 export const getWeatherDataRequestStart = () => ({
     type: GET_WEATHER_DATA_REQUEST_START
@@ -36,16 +36,12 @@ export const getWeatherData = () => (
        let formattedData = {};
 
        if(response.status === 200) {
-           // console.log('response: ', response.data);
            const weatherData = response.data;
            formattedData = weatherData.list.reduce((result: any, weather: any, index: number, list: any) => {
-               // console.log('reduce weather: ', weather);
                const momentDateObj = moment(weather.dt_txt, 'YYYY-MM-DD HH:mm:ss', true);
                const momentDate = momentDateObj.format('DD-MM-YYYY');
                const momentDateTimeHour = momentDateObj.format('HH:mm');
                const dateString = momentDateObj.format('D MMM YY');
-               // console.log('moment hour: ', momentDateObj.format('D MMM YY'));
-               // console.log('moment date; ', moment(weather.dt_txt, 'YYYY-MM-DD hh:mm:ss', true));
 
                if(result[momentDate]) {
                    result[momentDate] = {
@@ -72,7 +68,6 @@ export const getWeatherData = () => (
                        dateString
                    }
                } else {
-                   // result[momentDate] = {};
                    result[momentDate] = {
                        list: {
                            [momentDateTimeHour]: {
@@ -97,9 +92,6 @@ export const getWeatherData = () => (
                }
                return result;
            }, {});
-
-           // console.log('formattedData: ', formattedData);
-           // console.log('formattedData: ', Object.keys(formattedData));
        }
 
        dispatch(updateMaxCardCount(Object.keys(formattedData).length));

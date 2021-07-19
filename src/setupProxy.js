@@ -4,25 +4,14 @@ module.exports = function(app) {
 
 
     const countriesProxy = createProxyMiddleware({
-        target: "https://restcountries.eu/rest/v2/name",
+        target: "http://api.openweathermap.org",
         changeOrigin: true,
         logLevel: 'debug',
         autoRewrite: true,
         pathRewrite: {
-            '/countries' : ''
+            '/weather' : ''
         }
     });
 
-    const currenciesProxy = createProxyMiddleware({
-        target: "http://data.fixer.io",
-        changeOrigin: true,
-        logLevel: "debug",
-        autoRewrite: true,
-        pathRewrite: {
-            '/currencies': ''
-        }
-    })
-
-    app.use('/countries', countriesProxy);
-    app.use('/currencies', currenciesProxy);
+    app.use('/weather', countriesProxy);
 };
