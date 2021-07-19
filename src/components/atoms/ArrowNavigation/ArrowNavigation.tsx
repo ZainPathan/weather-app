@@ -19,8 +19,6 @@ const ArrowNavigation = (props: ArrowNavigationProps) => {
     const classes = useArrowNavigationStyles(props);
 
     const handleArrowClick = (event: React.MouseEvent, direction: string) => {
-        // console.log('handleArrowClick event: ', event);
-        // console.log('handleArrowClick direction: ', direction);
         switch(direction) {
             case 'back':
                 if((props.currentCardIndex === 0)) {
@@ -37,11 +35,6 @@ const ArrowNavigation = (props: ArrowNavigationProps) => {
         }
         props.handleNavigation(direction);
     }
-
-    // console.log('props.currentCardIndex: ', props.currentCardIndex);
-    // console.log('props.currentCardIndex !== 0: ', props.currentCardIndex !== 0);
-    // console.log('props.maxCardCount: ', props.maxCardCount);
-    // console.log('props.currentCardIndex === (props.maxCardCount - 1): ',props.currentCardIndex === (props.maxCardCount - 1));
 
     return (
         <Grid

@@ -23,8 +23,6 @@ const TemperatureSelection = (props: TemperatureSelectionProps) => {
     } = props;
 
     const onChange = (event: React.ChangeEvent, value: string) => {
-        // console.log('onChange event: ', event);
-        // console.log('onChange value: ', value);
         handleTemperatureUnitChange(value);
     }
 

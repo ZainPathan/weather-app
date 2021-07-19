@@ -47,4 +47,3 @@ const WeatherCard = ({currentCardIndex, weatherDate, temperatureDetails, index}:
 }
 
 export default WeatherCard;
-// export {};

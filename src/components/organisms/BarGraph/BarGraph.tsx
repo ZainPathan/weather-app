@@ -2,7 +2,6 @@ import React from 'react';
 import {
     BarChart,
     Bar,
-    // Cell,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -35,15 +34,12 @@ const BarGraph = ({weatherData, currentCardDate, temperatureUnit}: BarGraphProps
             >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
-                    // label="Time (in 24hr format)"
                     dataKey="time"
-                    // padding={{ left: 30, right: 30 }}
                 />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 {temperatureUnit === 'celsius' && <Bar dataKey="temperatureInCelsius" fill="#3f50b5" />}
-                {/*{temperatureUnit === 'fahrenheit' && <Bar dataKey="temperatureInFahrenheit" fill="#ab003c" />}*/}
                 {temperatureUnit === 'fahrenheit' && <Bar dataKey="temperatureInFahrenheit" fill="#f50057" />}
             </BarChart>
         </ResponsiveContainer>

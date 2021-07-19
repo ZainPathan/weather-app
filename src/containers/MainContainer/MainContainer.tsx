@@ -54,8 +54,6 @@ class MainContainer extends Component<MainContainerProps, {}> {
         const {
             updateTemperatureUnit
         } = this.props;
-
-        console.log('handleTemperatureUnitChange: ', value);
         updateTemperatureUnit(value);
     }
 

@@ -24,21 +24,19 @@ describe('ArrowNavigation component tests', () => {
 
     it('renders without Back Arrow when on first card', () => {
         const mockCurrentCardIndexFirst = 0;
-        const { container, getByTestId, debug } = render(
+        const { getByTestId } = render(
             <ArrowNavigation
                 handleNavigation={mockHandleNavigation}
                 currentCardIndex={mockCurrentCardIndexFirst}
                 maxCardCount={mockMaxCardCount}
             />
         );
-        // debug();
-        // expect(container.querySelector('.MuiSvgIcon-root')).toHaveClass('makeStyles-hideIcon-4');
         expect(getByTestId('back-arrow')).toHaveClass('makeStyles-hideIcon-4');
     });
 
     it('renders without Forward Arrow when on last card', () => {
         const mockCurrentCardIndexLast = mockMaxCardCount - 1;
-        const { container, getByTestId } = render(
+        const { getByTestId } = render(
             <ArrowNavigation
                 handleNavigation={mockHandleNavigation}
                 currentCardIndex={mockCurrentCardIndexLast}
@@ -49,7 +47,7 @@ describe('ArrowNavigation component tests', () => {
     });
 
     it('handleNavigation() is called', () => {
-        const { container, getByTestId, debug } = render(
+        const { getByTestId } = render(
             <ArrowNavigation
                 handleNavigation={mockHandleNavigation}
                 currentCardIndex={mockCurrentCardIndex}

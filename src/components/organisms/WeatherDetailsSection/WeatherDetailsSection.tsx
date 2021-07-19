@@ -1,13 +1,7 @@
 import React from 'react';
 import {
-    // Button,
-    // Card,
-    // CardActions,
-    // CardContent,
     Grid,
-    // Typography
 } from '@material-ui/core';
-// import clsx from 'clsx';
 import useWeatherDetailsSectionStyles from './styles/WeatherDetailsSection.style';
 import WeatherCard from '../../molecules/WeatherCard';
 import {
@@ -19,7 +13,7 @@ import {
     FAHRENHEIT_SYMBOL
 } from '../../../core/constants';
 import useWindowDimensions from '../../../core/hooks/useWindowDimensions';
-import { getCardsIndexList } from '../../../core/utils/getCardsIndexList';
+import { GetCardsIndexList } from '../../../core/utils/GetCardsIndexList';
 
 interface WeatherDetailsSectionProps {
     weatherData: any,
@@ -31,7 +25,7 @@ const WeatherDetailsSection = ({weatherData, temperatureUnit, currentCardIndex}:
 
     const classes = useWeatherDetailsSectionStyles();
     const { width } = useWindowDimensions();
-    const cardsIndexList = getCardsIndexList(
+    const cardsIndexList = GetCardsIndexList(
                                 width,
                                 currentCardIndex,
                                 weatherData ? Object.keys(weatherData).length : 0
@@ -59,35 +53,6 @@ const WeatherDetailsSection = ({weatherData, temperatureUnit, currentCardIndex}:
                     temperatureDetails={temperatureDetails}
                     index={index}
                 />
-                /*<Card
-                    key={date}
-                    variant="outlined"
-                    className={
-                        (currentCardIndex === index ) ?
-                            clsx(classes.weatherCard, classes.selectedWeatherCard) :
-                                classes.weatherCard
-                    }
-                >
-                    <CardContent>
-                        <Typography
-                            variant="h5"
-                            component="h2"
-                        >
-                            Temperature:&nbsp;
-                            {temperatureDetails}
-                            {/!*<br/>
-                            <br/>
-                            Date: {weatherDate}*!/}
-                        </Typography>
-                        <br/>
-                        <Typography
-                            variant="h5"
-                            component="h2"
-                        >
-                            Date: {weatherDate}
-                        </Typography>
-                    </CardContent>
-                </Card>*/
             ) : null
     });
 
@@ -98,78 +63,6 @@ const WeatherDetailsSection = ({weatherData, temperatureUnit, currentCardIndex}:
             className={classes.weatherCards}
         >
             {currentWeatherCards}
-            {/*<Card
-                variant="outlined"
-                className={classes.weatherCard}
-            >
-                <CardContent>
-                    <Typography
-                        variant="h5"
-                        component="h2"
-                    >
-                        Weather Data
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button
-                        variant="contained"
-                        onClick={() => {
-                            // handleSensorButtonClick(sensorData);
-                        }}
-                        size="large"
-                    >
-                        Button text
-                    </Button>
-                </CardActions>
-            </Card>
-            <Card
-                variant="outlined"
-                className={classes.weatherCard}
-            >
-                <CardContent>
-                    <Typography
-                        variant="h5"
-                        component="h2"
-                    >
-                        Weather Data
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button
-                        variant="contained"
-                        onClick={() => {
-                            // handleSensorButtonClick(sensorData);
-                        }}
-                        size="large"
-                    >
-                        Button text
-                    </Button>
-                </CardActions>
-            </Card>
-            <Card
-                variant="outlined"
-                className={classes.weatherCard}
-            >
-                <CardContent>
-                    <Typography
-                        variant="h5"
-                        component="h2"
-                    >
-                        Weather Data
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button
-                        variant="contained"
-                        onClick={() => {
-                            // handleSensorButtonClick(sensorData);
-                        }}
-                        size="large"
-                    >
-                        Button text
-                    </Button>
-                </CardActions>
-            </Card>*/}
         </Grid>
     );
 };

@@ -1,12 +1,9 @@
-export const getCardsIndexList = (width: number, currentCardIndex: number, maxCardsLength: number = 0) => {
-    // let numberOfCardsToBeShown = 3;
+export const GetCardsIndexList = (width: number, currentCardIndex: number, maxCardsLength: number = 0) => {
     let cardsIndexList: Array<number> = [];
 
     if(width < 600) {
-        // numberOfCardsToBeShown = 1;
         cardsIndexList = [currentCardIndex];
     } else if(width < 960) {
-        // numberOfCardsToBeShown = 2;
         if(currentCardIndex === 0) {
             cardsIndexList = [currentCardIndex, currentCardIndex + 1];
         } else if(currentCardIndex === maxCardsLength - 1) {
