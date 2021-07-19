@@ -12,6 +12,9 @@ const MainContainerStyles = () => createStyles({
         border: '1px solid black',
         height: 250,
         margin: '0 15px 0 15px'
+    },
+    errorMessage: {
+        textAlign: 'center'
     }
 });
 

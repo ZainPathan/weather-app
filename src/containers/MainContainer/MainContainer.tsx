@@ -92,7 +92,9 @@ class MainContainer extends Component<MainContainerProps, {}> {
             <>
                 {loadingState === 'LOADING' ?
                     (<Loader showLoader={true} />) :
-                        (<div className={classes.mainContainer}>
+                        (loadingState === 'ERROR') ?
+                            (<h3 className={classes.errorMessage}>Error Loading Data. Try again.</h3>) :
+                                (<div className={classes.mainContainer}>
                             <Grid
                                 container
                                 spacing={2}
