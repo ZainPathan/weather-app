@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherDetailsSection component tests renders properly 1`] = `
+<div
+  className="MuiGrid-root makeStyles-weatherCards-1 MuiGrid-item MuiGrid-grid-xs-12"
+>
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-weatherCard-2 MuiPaper-outlined MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardContent-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Temperature: 
+        64.4°F
+      </h2>
+      <br />
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Date: 
+        19 Jul 21
+      </h2>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-weatherCard-2 makeStyles-selectedWeatherCard-3 MuiPaper-outlined MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardContent-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Temperature: 
+        62.6°F
+      </h2>
+      <br />
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Date: 
+        20 Jul 21
+      </h2>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-weatherCard-2 MuiPaper-outlined MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardContent-root"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Temperature: 
+        62.6°F
+      </h2>
+      <br />
+      <h2
+        className="MuiTypography-root MuiTypography-h5"
+      >
+        Date: 
+        21 Jul 21
+      </h2>
+    </div>
+  </div>
+</div>
+`;

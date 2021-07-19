@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherCard component tests renders properly 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-weatherCard-1 MuiPaper-outlined MuiPaper-rounded"
+>
+  <div
+    className="MuiCardContent-root"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      Temperature: 
+      68°F
+    </h2>
+    <br />
+    <h2
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      Date: 
+      18 Jul 21
+    </h2>
+  </div>
+</div>
+`;
