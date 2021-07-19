@@ -2,7 +2,6 @@ import { createStyles } from '@material-ui/core';
 
 const MainContainerStyles = () => createStyles({
     mainContainer: {
-        // display: 'flex',
         padding: 20,
         flexGrow: 1
     },
@@ -15,6 +14,11 @@ const MainContainerStyles = () => createStyles({
     },
     errorMessage: {
         textAlign: 'center'
+    },
+    header: {
+        textAlign: 'center',
+        marginTop: 0,
+        marginBottom: 10
     }
 });
 

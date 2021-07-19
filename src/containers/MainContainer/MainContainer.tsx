@@ -95,41 +95,42 @@ class MainContainer extends Component<MainContainerProps, {}> {
                         (loadingState === 'ERROR') ?
                             (<h3 className={classes.errorMessage}>Error Loading Data. Try again.</h3>) :
                                 (<div className={classes.mainContainer}>
-                            <Grid
-                                container
-                                spacing={2}
-                                direction="row"
-                                justify="center"
-                                alignItems="flex-start"
-                            >
-                                <TemperatureSelection
-                                    temperatureUnit={temperatureUnit}
-                                    handleTemperatureUnitChange={this.handleTemperatureUnitChange}
-                                />
-                                <ArrowNavigation
-                                    handleNavigation={this.handleNavigation}
-                                    currentCardIndex={currentCardIndex}
-                                    maxCardCount={maxCardCount}
-                                />
-                                <WeatherDetailsSection
-                                    weatherData={weatherData}
-                                    temperatureUnit={temperatureUnit}
-                                    // currentCardDate={currentCardDate}
-                                    currentCardIndex={currentCardIndex}
-                                />
-                                <Grid
-                                    item
-                                    xs={12}
-                                    className={classes.barGraph}
-                                >
-                                    <BarGraph
-                                        weatherData={weatherData}
-                                        currentCardDate={currentCardDate}
-                                        temperatureUnit={temperatureUnit}
-                                    />
-                                </Grid>
-                            </Grid>
-                        </div>)
+                                    <h2 className={classes.header}>Weather App - Munich</h2>
+                                    <Grid
+                                        container
+                                        spacing={2}
+                                        direction="row"
+                                        justify="center"
+                                        alignItems="flex-start"
+                                    >
+                                        <TemperatureSelection
+                                            temperatureUnit={temperatureUnit}
+                                            handleTemperatureUnitChange={this.handleTemperatureUnitChange}
+                                        />
+                                        <ArrowNavigation
+                                            handleNavigation={this.handleNavigation}
+                                            currentCardIndex={currentCardIndex}
+                                            maxCardCount={maxCardCount}
+                                        />
+                                        <WeatherDetailsSection
+                                            weatherData={weatherData}
+                                            temperatureUnit={temperatureUnit}
+                                            // currentCardDate={currentCardDate}
+                                            currentCardIndex={currentCardIndex}
+                                        />
+                                        <Grid
+                                            item
+                                            xs={12}
+                                            className={classes.barGraph}
+                                        >
+                                            <BarGraph
+                                                weatherData={weatherData}
+                                                currentCardDate={currentCardDate}
+                                                temperatureUnit={temperatureUnit}
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                </div>)
                 }
             </>
         )
