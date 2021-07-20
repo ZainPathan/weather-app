@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function(app) {
 
 
-    const countriesProxy = createProxyMiddleware({
+    const weatherProxy = createProxyMiddleware({
         target: "http://api.openweathermap.org",
         changeOrigin: true,
         logLevel: 'debug',
@@ -13,5 +13,5 @@ module.exports = function(app) {
         }
     });
 
-    app.use('/weather', countriesProxy);
+    app.use('/weather', weatherProxy);
 };
