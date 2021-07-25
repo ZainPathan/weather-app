@@ -1,0 +1,11 @@
+{
+  "root": "build/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "proxies": {
+    "/weather/": {
+      "origin": "http://api.openweathermap.org"
+    }
+  }
+}
