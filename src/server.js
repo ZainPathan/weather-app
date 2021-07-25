@@ -15,6 +15,13 @@ const content = express.static(path.join(__dirname, 'build'), {
 });
 
 app.use(content);
-app.use('/*', content);
+// app.use('/*', content);
 
-app.listen(port, '0.0.0.0');
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(port, '0.0.0.0', (err) => {
+    console.log('Server has started on port: ', port);
+    err && console.log('Error: ', err);
+});
