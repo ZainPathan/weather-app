@@ -5,6 +5,7 @@
 * For Weather Data the following API is used [Open Weather Forecast API](http://api.openweathermap.org/data/2.5/forecast)
     * http://api.openweathermap.org/data/2.5/forecast
 * The Open Weather Forecast API returns the weather forecast for each day in 8 segments, 3 hours apart
+* Deployed [here](https://weather-app-zain.herokuapp.com/)
 
 ## Project Setup
 
